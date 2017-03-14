@@ -11,7 +11,8 @@ public class Main { // Класс Меин
     {
         int minimun = st.get(0).length();
         int maximum = st.get(0).length();
-        int av = 0;
+        int av = 0;// среднее значение
+
         for (String s: st) // прохождение списка через цикл
         {
 

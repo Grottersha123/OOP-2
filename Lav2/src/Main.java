@@ -1,3 +1,4 @@
+import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 /*3. Написать регулярное выражение, определяющее является ли заданная строка
@@ -6,9 +7,13 @@ import java.util.regex.Pattern;
 public class Main {
 
     public static void main(String[] args) {
+// Ввод, мас адрес не введен
 
-        Pattern p1 = Pattern.compile("([a-f]+[A-F]+:){3}+([0-9]{2}+:){2}+[0-9]{2}"); /*ругулярное выражение , которокое */
-        Matcher m1 = p1.matcher( "aE:dC:cA:56:76:54" ); // возвращает true, если шаблон соответствует всей строке, иначе false.
+        Pattern p1 = Pattern.compile("([a-f]+[A-F]+:){3}+([0-9]{2}+:){2}+[0-9]{2}"); /*регулярное выражение*/
+        System.out.print("Введите количество строк ");
+        Scanner n = new Scanner(System.in);// создаём объект класса Scanner
+        String str = n.next(); //считывает целое число с потока ввода и сохраняем в переменную
+        Matcher m1 = p1.matcher( str ); // возвращает true, если шаблон соответствует всей строке, иначе false.
         /*re+ Одно или более совпадений предыдущего выражения.
           re{n} Соответствует ровно N Количество вхождений предшествующего выражения.
           (?: re) Группы регулярных выражений, не помнящая найденный текст.
