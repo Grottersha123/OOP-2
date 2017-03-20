@@ -54,7 +54,7 @@ public class Main { // Класс Меин
         }
         av = average(strings);// функция по нхождению среднеего числа строк
 
-        System.out.println("Вывод слов длина, которых меньше средней, средняя ллина " + av);
+        System.out.println("Вывод слов длина, которых меньше средней, средняя длина " + av);
 
         for (String s: strings) {
             if (s.length() < av)
