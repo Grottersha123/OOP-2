@@ -4,24 +4,39 @@ import java.util.regex.Pattern;
 /*3. Написать регулярное выражение, определяющее является ли заданная строка
 правиль-ным MAC-адресом. – пример правильных выражений: aE:dC:cA:56:76:54.
 – пример неправильных выражений: 01:23:45:67:89:Az. */
+
+class Pat {
+    Pattern p1;
+    Pat()
+    {
+        p1 = Pattern.compile("([a-f]+[A-F]+:){3}+([0-9]{2}+:){2}+[0-9]{2}"); /*регулярное выражение*/
+    }
+
+        boolean check_mac(String str)
+        {
+            Matcher m = this.p1.matcher(str);
+            return m.matches();
+        }
+        }
+
+
 public class Main {
 
     public static void main(String[] args) {
 // Ввод, мас адрес не введен
 
-        Pattern p1 = Pattern.compile("([a-f]+[A-F]+:){3}+([0-9]{2}+:){2}+[0-9]{2}"); /*регулярное выражение*/
+        Pat p = new Pat();
         System.out.print("Введите Мас адрес ");
         Scanner n = new Scanner(System.in);// создаём объект класса Scanner
         String str = n.next(); //считывает целое число с потока ввода и сохраняем в переменную
-        str = "";
-        Matcher m1 = p1.matcher(str); // возвращает true, если шаблон соответствует всей строке, иначе false.
+
         if (str.length() == 0)
         {
             System.out.println("Введена пустая строка");
         }
         else
         {
-            boolean b = m1.matches();
+            boolean b = p.check_mac(str);
             String m =  b ? "Введен  правильный MAC  адрес: " + str : "Введен не правильный MAC  адрес: " + str;
             System.out.println(m);
         }
