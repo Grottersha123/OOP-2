@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Class-Path: D:\Git_project\OOP-2\Lav2\out\production\Lav2\Main.class
+Main-Class: Main
+

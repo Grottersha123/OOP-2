@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="ProductMain">
-  <grid id="27dc6" binding="root" layout-manager="GridLayoutManager" row-count="11" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
-    <margin top="10" left="10" bottom="10" right="10"/>
+  <grid id="27dc6" binding="root" layout-manager="GridLayoutManager" row-count="11" column-count="5" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
       <xy x="20" y="20" width="1148" height="762"/>
     </constraints>
-    <properties/>
-    <border type="none"/>
+    <properties>
+      <maximumSize width="1000" height="1000"/>
+      <preferredSize width="700" height="500"/>
+    </properties>
+    <border type="line" title="Lav4" title-justification="2" title-position="2">
+      <font/>
+    </border>
     <children>
       <component id="274f2" class="javax.swing.JButton" binding="inputPriceButton" default-binding="true">
         <constraints>
-          <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="3" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <enabled value="false"/>
@@ -19,7 +24,7 @@
       </component>
       <component id="514ef" class="javax.swing.JButton" binding="inputButton" default-binding="true">
         <constraints>
-          <grid row="10" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="10" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <enabled value="false"/>
@@ -28,7 +33,7 @@
       </component>
       <component id="13301" class="javax.swing.JFormattedTextField" binding="Text1">
         <constraints>
-          <grid row="9" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+          <grid row="9" column="0" row-span="1" col-span="4" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="40"/>
           </grid>
         </constraints>
@@ -38,24 +43,18 @@
       </component>
       <component id="a7f97" class="javax.swing.JCheckBox" binding="workerCheckBox" default-binding="true">
         <constraints>
-          <grid row="4" column="0" row-span="5" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="4" column="0" row-span="5" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="68" height="29"/>
+          </grid>
         </constraints>
         <properties>
           <enabled value="true"/>
           <text value="Worker"/>
         </properties>
       </component>
-      <component id="b2496" class="javax.swing.JFormattedTextField" binding="Text2">
-        <constraints>
-          <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
-            <preferred-size width="150" height="40"/>
-          </grid>
-        </constraints>
-        <properties/>
-      </component>
       <component id="94a41" class="javax.swing.JLabel">
         <constraints>
-          <grid row="5" column="1" row-span="3" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="5" column="1" row-span="3" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <text value="Input names of all products"/>
@@ -63,7 +62,7 @@
       </component>
       <component id="5642f" class="javax.swing.JLabel">
         <constraints>
-          <grid row="1" column="1" row-span="2" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="1" column="1" row-span="2" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <text value="Input price of all products"/>
@@ -71,7 +70,7 @@
       </component>
       <component id="680a2" class="javax.swing.JLabel">
         <constraints>
-          <grid row="7" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="7" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <text value="Input count of products"/>
@@ -79,7 +78,9 @@
       </component>
       <component id="d59c1" class="javax.swing.JButton" binding="outputListButton" default-binding="true">
         <constraints>
-          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="48" height="41"/>
+          </grid>
         </constraints>
         <properties>
           <enabled value="false"/>
@@ -88,7 +89,9 @@
       </component>
       <component id="b5d60" class="javax.swing.JCheckBox" binding="directorCheckBox" default-binding="true">
         <constraints>
-          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="68" height="29"/>
+          </grid>
         </constraints>
         <properties>
           <enabled value="false"/>
@@ -97,7 +100,7 @@
       </component>
       <component id="d7c3f" class="javax.swing.JFormattedTextField" binding="formattedTextField2" default-binding="true">
         <constraints>
-          <grid row="9" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+          <grid row="9" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="40"/>
           </grid>
         </constraints>
@@ -105,12 +108,41 @@
       </component>
       <component id="6be0" class="javax.swing.JCheckBox" binding="priceMenCheckBox" default-binding="true">
         <constraints>
-          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="68" height="29"/>
+          </grid>
         </constraints>
         <properties>
           <enabled value="false"/>
           <text value="PriceMen"/>
         </properties>
+      </component>
+      <component id="da46b" class="javax.swing.JTextArea" binding="textArea1" default-binding="true">
+        <constraints>
+          <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="8" fill="2" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="50"/>
+          </grid>
+        </constraints>
+        <properties>
+          <enabled value="false"/>
+        </properties>
+      </component>
+      <component id="855e4" class="javax.swing.JButton" binding="button1" default-binding="true">
+        <constraints>
+          <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <enabled value="false"/>
+          <text value="OutputInTExtArea"/>
+        </properties>
+      </component>
+      <component id="b2496" class="javax.swing.JFormattedTextField" binding="Text2">
+        <constraints>
+          <grid row="3" column="2" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="40"/>
+          </grid>
+        </constraints>
+        <properties/>
       </component>
     </children>
   </grid>

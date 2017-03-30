@@ -26,11 +26,16 @@ public class Main {
 // Ввод, мас адрес не введен
 
         Pat p = new Pat();
+        System.out.println("Чтобы ввести пусту строку, введите empty");
         System.out.print("Введите Мас адрес ");
         Scanner n = new Scanner(System.in);// создаём объект класса Scanner
         String str = n.next(); //считывает целое число с потока ввода и сохраняем в переменную
-
-        if (str.length() == 0)
+        if (str.length() > 15)
+        {
+            System.out.println("Введена слишком большая строка");
+            System.exit(0);
+        }
+        if (str.equalsIgnoreCase("empty"))
         {
             System.out.println("Введена пустая строка");
         }

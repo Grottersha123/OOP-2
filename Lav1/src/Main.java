@@ -31,11 +31,11 @@ class Str { // класс в котором создается пустая ст
         for (String s : st) // прохождение списка через цикл
         {
 
-            if (s.length() < minimun) {
+            if (s.length() < minimun && s.length() <= 15 && !s.equalsIgnoreCase("empty")) {
                 minimun = s.length();// длина элемента списка
 
             }
-            if (s.length() > maximum) {
+            if (s.length() > maximum && s.length() <= 15 ) {
                 maximum = s.length();
 
             }
@@ -50,44 +50,69 @@ class Str { // класс в котором создается пустая ст
 public class Main { // Класс Меин
 
 
-
-
     public static void main(String[] args) throws IOException {
+
         int av = 0;
         boolean f = false;
 
         System.out.print("Введите количество строк ");
-        Scanner n = new Scanner(System.in);// создаём объект класса Scanner
-        int number = n.nextInt(); //считывает целое число с потока ввода и сохраняем в переменную
-        Scanner in = new Scanner(System.in);// создаём объект класса Scanner
-        List<String> strings = new ArrayList<String>(); //создает пустой список из строк
-        Str stt = new Str();
-
-        for(int i=1;i <= number; i++){
-            System.out.println("Строка номер "+(i));
-
-            strings.add(stt.get(in.next()));// добавление в список строк
-
-        }
-        av = stt.average(strings);// функция по нхождению среднеего числа строк
-
-        System.out.println("Вывод слов длина, которых меньше средней, средняя длина " + av);
-
-        for (String s: strings) {
-            if (s.length() < av)
-            {
-                f = true;
-                System.out.println("Строка "+s+" Длина "+ s.length()); // Вывод
+        try {
+            Scanner n = new Scanner(System.in);// создаём объект класса Scanner
+            int number = n.nextInt(); //считывает целое число с потока ввода и сохраняем в переменную
+            if (number > 15) {
+                System.out.print("Введено больше n чем может быть");
+                System.exit(0);
             }
+            if (number < 1) {
+                System.out.println("Введено число 0 или меньше 0");
+            }
+            Scanner in = new Scanner(System.in);// создаём объект класса Scanner
+            List<String> strings = new ArrayList<String>(); //создает пустой список из строк
+            Str stt = new Str();
+            String[] a;
+            String str1;
+            System.out.println("Вводите по одной строке через enter");
+            System.out.println("Если вводить все одной строкой, то по пробелу будут отделены строки");
+            // System.out.println("Ытобы ввести пустую строку введите ");
+            for (int i = 1; i <= number; i++) {
+                System.out.println("Введите строку " + i);
+                a = in.nextLine().split(" ");
+                str1 = a[0];
+
+                if (str1.equalsIgnoreCase("empty")) {
+                    System.out.println("Данная строка является пустой и обрабатываться не будет");
+                    continue;
+                }
+                if (a.length > 1) {
+                    System.out.println("Введнная строка после пробела обрабатываться не будет");
+                }
+                if (str1.length() > 15) {
+                    System.out.println("Данная ,больше 15 и обрабатываться не будет");
+                    continue;
+                }
+                strings.add(stt.get(str1));// добавление в список строк
+
+            }
+            av = stt.average(strings);// функция по нхождению среднеего числа строк
+
+            System.out.println("Вывод слов длина, которых меньше средней, средняя длина " + av);
+
+            for (String s : strings) {
+                if (s.length() < av) {
+                    f = true;
+                    System.out.println("Строка " + s + " Длина " + s.length()); // Вывод
+                }
 
 
+            }
+            System.out.println();
+            if (f == false) {
+                System.out.println("Таких строк нет");
+            }
         }
-        System.out.println();
-        if (f == false){
-            System.out.println("Таких строк нет");
+        catch (Exception e){
+            System.out.println("Вы ввели недопустимый символ");
         }
-
 
     }
-
 }
